@@ -1,0 +1,56 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+    <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue=""
+        android:inputType="textCapWords"
+        android:key="user_name"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Name" />
+
+    <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
+     dismiss it. -->
+
+    <EditTextPreference
+        android:key="max_heart_rate"
+        android:inputType="number"
+        android:title="Max Heart Rate (bpm)" />
+
+    <EditTextPreference
+        android:key="max_heart_rate_duration"
+        android:inputType="number"
+        android:defaultValue="60"
+        android:summary="If your Heart Rate exceeds your maximum set value for this duration (secs) then your heart may need a check up and your emergency contacts are alerted."
+        android:title="Max Heart Rate Duration (seconds)" />
+
+    <EditTextPreference
+        android:key="min_heart_rate"
+        android:inputType="number"
+        android:title="Min Heart Rate (bpm)" />
+
+    <EditTextPreference
+        android:key="min_heart_rate_duration"
+        android:inputType="number"
+        android:defaultValue="60"
+        android:summary="If your Heart Rate exceeds your minimum set value for this duration (secs) then your heart may need a check up and your emergency contacts are alerted."
+        android:title="Min Heart Rate Duration (seconds)" />
+
+    <EditTextPreference
+        android:key="max_hrv_score"
+        android:inputType="number"
+        android:summary="This is your maximum score of Heart Rate Variability (HRV) based on the Root-Mean Square Differences of successive R-R intervals (RMSSD)."
+        android:title="Max HRV Score (ms)" />
+
+
+    <EditTextPreference
+        android:key="hrv_score_duration"
+        android:inputType="number"
+        android:defaultValue="60"
+        android:summary="If your HRV Score exceeds your maximum set value for this duration (beats) then your heart may need a check up and your emergency contacts are alerted."
+        android:title="HRV Score Duration (beats)" />
+
+</PreferenceScreen>
